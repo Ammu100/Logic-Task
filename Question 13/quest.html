@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function findKthLargestAndSmallest(arr, N) {
+            if (arr.length === 0 || N < 1 || N > arr.length) {
+                return "Invalid input.";
+            }
+
+            arr.sort((a, b) => a - b);
+
+            const kthSmallest = arr[N - 1];
+            const kthLargest = arr[arr.length - N];
+            return { kthSmallest, kthLargest };
+        }
+
+        const N = 3; // Change N to the desired value
+        const arr = [3, 20, 4, 7, 30, 45];
+
+        const result = findKthLargestAndSmallest(arr, N);
+
+        console.log(`Kth Smallest Element:`, result.kthSmallest);
+        console.log(`Kth Largest Element:`, result.kthLargest);
+    </script>
+</body>
+
+</html>

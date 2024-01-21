@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var array = [3, 2, 1, 56, 10000, 167];
+
+        var minValue = array[0];
+        var maxValue = array[0];
+                        // 1<6
+        for (var i = 1; i < array.length; i++) {
+            if (array[i] < minValue) {
+                minValue = array[i];
+            }
+
+            if (array[i] > maxValue) {
+                maxValue = array[i];
+            }
+        }
+
+        console.log("Minimum Array Value is: " + minValue);
+        console.log("Maximum Array Value is: " + maxValue);
+    </script>
+
+</body>
+
+</html>

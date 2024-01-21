@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var arr = [8, 9, 10, 3, 4, 8, 7, 9, 11, 3];
+        var duplicateValues = [];
+
+        for (var i = 0; i < arr.length; i++) {
+            for (var j = i + 1; j < arr.length; j++) {
+                if (arr[i] === arr[j] && duplicateValues.indexOf(arr[i]) === -1) {
+                    duplicateValues.push(arr[i]);
+                }
+            }
+        }
+
+        console.log(duplicateValues);
+    </script>
+
+
+
+</body>
+
+</html>

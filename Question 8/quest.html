@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function combineLists(list1, list2) {
+            var combinedList = [];
+
+            var maxLength = Math.max(list1.length, list2.length);
+
+            for (var i = 0; i < maxLength; i++) {
+                if (i < list1.length) {
+                    combinedList.push(list1[i]);
+                }
+
+                if (i < list2.length) {
+                    combinedList.push(list2[i]);
+                }
+            }
+
+            return combinedList;
+        }
+
+        var list1 = ['a', 'b', 'c'];
+        var list2 = [1, 2, 3];
+
+        var result = combineLists(list1, list2);
+        console.log(result);
+
+    </script>
+</body>
+
+</html>
