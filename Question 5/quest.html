@@ -9,27 +9,33 @@
 
 <body>
     <script>
-        function isPrime(number) {
-            if (number < 2) {
-                return false;
-            }
 
-            for (let i = 2; i <= Math.sqrt(number); i++) {
-                if (number % i === 0) {
+        function isPrime(n) {
+
+            if (n == 1 || n == 0)
+                return false;
+
+            for (var i = 2; i < n; i++) {
+
+                if (n % i == 0)
                     return false;
-                }
             }
 
             return true;
         }
 
-        console.log("Prime numbers in the range 1 to 100:");
 
-        for (let i = 1; i <= 100; i++) {
+        var N = 100;
+
+        var result = [];
+        for (var i = 1; i <= N; i++) {
+
             if (isPrime(i)) {
-                console.log(i);
+                result.push(i);
             }
         }
+
+        console.log(result.join(' '));
 
     </script>
 </body>
